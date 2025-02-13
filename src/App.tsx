@@ -11,7 +11,7 @@ function App() {
 
   const handleDeleteTodos = (index: number) => {
     //filter will keep the true ones
-    const newTodos: string[] = todos.filter((todo, todosIndex) => {
+    const newTodos: string[] = todos.filter((_, todosIndex) => {
       return index !== todosIndex;
       //will keep the ones where todosIndex isnt the same
     });
