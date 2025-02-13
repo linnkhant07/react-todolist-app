@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #202124;
+  color: #e4e4e4; 
 }
 
 #root {
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   padding: 14px;
-  background: #eff6ff;
+  background: #1e1e1e; 
   gap: 14px;
 }
 
@@ -27,31 +27,55 @@ header,
   margin: 0 auto;
   gap: 14px;
 }
-
 header input {
   flex: 1;
   border-radius: 14px;
   outline: none;
   width: 100%;
+  background: #2e2e2e; 
+  color: #e4e4e4; 
+  border: 2px solid #4a4a4a; 
+  padding: 14px 18px;
+  transition: all 200ms ease-in-out; 
+}
+
+header input::placeholder {
+  color: #6a6a6a; 
+}
+
+header input:focus {
+  border-color: #ffcc00; 
+  box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5); 
+  background: #4a4a4a; 
 }
 
 header button {
   border-radius: 14px;
-  background: transparent;
-  transition-duration: 200ms;
+  background: #ffcc00; 
+  color: #1e1e1e;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 200ms ease-in-out;
   cursor: pointer;
+  padding: 14px 18px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(255, 204, 0, 0.4); 
 }
 
 header button:hover {
-  opacity: 0.7;
+  background: #d4af37;
+  box-shadow: 0px 4px 10px rgba(212, 175, 55, 0.6); 
 }
 
-header button,
-header input {
-  padding: 14px 18px;
-  border: none;
-  outline: none;
-  background: white;
+header button:active {
+  background: #b8860b; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+header {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
 }
 
 p {
@@ -70,36 +94,37 @@ p {
   gap: 14px;
   padding: 14px;
   border-radius: 14px;
-  background: white;
+  background: #2e2e2e; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
 }
 
 .todoItem p {
   flex: 1;
-
+  color: #e4e4e4; 
 }
 
 .todoItem input {
   flex: 1;
-  border: 2px solid #d1d5db; 
-  border-radius: 14px; 
-  padding: 12px; 
-  outline: none; 
-  font-family: 'Press Start 2P', system-ui; 
-  font-size: 0.9em; 
-  background-color: #f9fafb; 
-  color: #202124; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-  transition: all 200ms ease-in-out; 
+  border: 1px solid #4a4a4a; 
+  border-radius: 14px;
+  padding: 12px;
+  outline: none;
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 0.9em;
+  background-color: #3e3e3e; 
+  color: #e4e4e4; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: all 200ms ease-in-out;
 }
 
 .todoItem input:focus {
-  border-color: #3b82f6; 
-  box-shadow: 0px 4px 10px rgba(59, 130, 246, 0.3); 
-  background-color: #ffffff; 
+  border-color: #ffcc00; 
+  box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5); 
+  background-color: #4a4a4a; 
 }
 
 .todoItem input:hover {
-  border-color: #9ca3af; 
+  border-color: #d4af37; 
 }
 
 .actionsContainer {
@@ -113,16 +138,14 @@ p {
   border: none;
   background: transparent;
   cursor: pointer;
+  color: #e4e4e4; 
 }
 
 .actionsContainer button:hover {
-  opacity: 0.7;
+  color: #cfcfcf; 
 }
 
-
-
 @media (min-width: 640px) {
-
   header button,
   header input {
     font-size: 1.2em;
